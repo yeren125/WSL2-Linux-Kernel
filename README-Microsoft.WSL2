@@ -1,7 +1,7 @@
 Build instructions:
 
 1. Install a recent Ubuntu distribution
-2. sudo apt install build-essential flex bison libssl-dev libelf-dev
+2. sudo apt install g++ make flex bison libssl-dev libelf-dev bc
 3. make KCONFIG_CONFIG=Microsoft/config-wsl
 
 Install instructions:
