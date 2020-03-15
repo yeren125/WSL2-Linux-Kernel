@@ -1,5 +1,5 @@
 trigger:
-  - master
+  - wsl-xyb-port-5.5.y
 
 jobs:
   - job: Build
