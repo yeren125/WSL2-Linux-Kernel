@@ -20,10 +20,10 @@ jobs:
           gitHubConnection: xyb
           repositoryName: xieyubo/WSL2-Linux-Kernel
           action: delete
-          tag: latest
+          tag: wsl-xyb-port-5.5.y-latest
         continueOnError: true
       - script: |
-          git push origin :refs/tags/latest
+          git push origin :refs/tags/wsl-xyb-port-5.5.y-latest
       - task: GitHubRelease@0
         displayName: Create new release
         inputs:
@@ -32,7 +32,7 @@ jobs:
           action: create
           target: $(Build.SourceVersion)
           tagSource: manual
-          tag: latest
+          tag: wsl-xyb-port-5.5.y-latest
           assetUploadMode: delete
           isPreRelease: true
           addChangeLog: false
