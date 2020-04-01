@@ -7,6 +7,6 @@ Build instructions:
 Install instructions:
 
 1. This kernel is only for WSL 2. Please follow http://aka.ms/wsl2 to enable WSL 2
-2. After build finish, cp arch/x86_x64/boot/bzImage /mnt/c/temp/kernel
+2. After build finish, cp arch/x86_64/boot/bzImage /mnt/c/temp/kernel
 3. In windows cmd: wsl.exe --shutdown
 4. Copy c:\temp\kernel to c:\windows\system32\lxss\tools
