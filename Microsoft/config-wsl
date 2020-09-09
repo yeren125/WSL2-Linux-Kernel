@@ -1,13 +1,13 @@
 #
 # Automatically generated file; DO NOT EDIT.
-# Linux/x86 5.7.12 Kernel Configuration
+# Linux/x86 5.7.19 Kernel Configuration
 #
 
 #
-# Compiler: gcc (Ubuntu 9.3.0-10ubuntu2) 9.3.0
+# Compiler: gcc (Ubuntu 10-20200411-0ubuntu1) 10.0.1 20200411 (experimental) [master revision bb87d5cc77d:75961caccb7:f883c46b4877f637e0fa5025b4d6b5c9040ec566]
 #
 CONFIG_CC_IS_GCC=y
-CONFIG_GCC_VERSION=90300
+CONFIG_GCC_VERSION=100001
 CONFIG_LD_VERSION=234000000
 CONFIG_CLANG_VERSION=0
 CONFIG_CC_CAN_LINK=y
