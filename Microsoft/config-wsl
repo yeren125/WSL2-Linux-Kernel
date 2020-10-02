@@ -1,6 +1,6 @@
 #
 # Automatically generated file; DO NOT EDIT.
-# Linux/x86 5.8.12 Kernel Configuration
+# Linux/x86 5.8.13 Kernel Configuration
 #
 CONFIG_CC_VERSION_TEXT="gcc (Ubuntu 10-20200411-0ubuntu1) 10.0.1 20200411 (experimental) [master revision bb87d5cc77d:75961caccb7:f883c46b4877f637e0fa5025b4d6b5c9040ec566]"
 CONFIG_CC_IS_GCC=y
