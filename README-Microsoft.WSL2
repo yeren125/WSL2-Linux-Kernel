@@ -1,0 +1,15 @@
+Build instructions:
+
+1. Install a recent Ubuntu distribution
+2. sudo apt install g++ make flex bison libssl-dev libelf-dev bc
+3. make KCONFIG_CONFIG=Microsoft/config-wsl
+
+Install instructions:
+
+1. This kernel is only for WSL 2. Please follow http://aka.ms/wsl2 to enable WSL 2
+2. After build finish, cp arch/x86_64/boot/bzImage /mnt/c/temp/kernel
+3. In windows cmd: wsl.exe --shutdown
+4. Copy c:\temp\kernel to c:\windows\system32\lxss\tools, or create a file `%userprofile%\.wslconfig` with content:
+
+        [wsl2]
+        kernel=c:\\temp\\kernel\\kernel
