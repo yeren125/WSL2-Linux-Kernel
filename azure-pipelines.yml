@@ -1,0 +1,38 @@
+trigger:
+  - wsl-xyb-port-5.9.y
+
+jobs:
+  - job: Build
+    pool:
+      vmImage: ubuntu-20.04
+    steps:
+      - checkout: self
+        persistCredentials: true
+      - script: |
+          set -e
+          sudo apt update
+          sudo apt install -y g++ make flex bison libssl-dev libelf-dev bc
+          make -j`nproc` KCONFIG_CONFIG=Microsoft/config-wsl
+          cp arch/x86_64/boot/bzImage $(Build.ArtifactStagingDirectory)/kernel
+      - task: GitHubRelease@0
+        displayName: Delete old release
+        inputs:
+          gitHubConnection: xyb
+          repositoryName: xieyubo/WSL2-Linux-Kernel
+          action: delete
+          tag: wsl-xyb-port-5.9.y-latest
+        continueOnError: true
+      - script: |
+          git push origin :refs/tags/wsl-xyb-port-5.9.y-latest
+      - task: GitHubRelease@0
+        displayName: Create new release
+        inputs:
+          gitHubConnection: xyb
+          repositoryName: xieyubo/WSL2-Linux-Kernel
+          action: create
+          target: $(Build.SourceVersion)
+          tagSource: manual
+          tag: wsl-xyb-port-5.9.y-latest
+          assetUploadMode: delete
+          isPreRelease: true
+          addChangeLog: false
